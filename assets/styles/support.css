@@ -1,0 +1,124 @@
+﻿/* Sticky footer: pushes footer to the bottom if content is short */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Support Page Styles */
+.support-container {
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+    .support-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        border:2px solid #645452;
+        border-radius:20px;
+        background-color: #645452;
+        
+        color: burlywood;
+    }
+
+    .support-container p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: burlywood;
+    }
+
+.support-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.support-card {
+    background-color: #d3c9c9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 280px;
+    transition: transform 0.3s;
+}
+
+    .support-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .support-card i {
+        color: burlywood;
+        margin-bottom: 15px;
+    }
+
+    .support-card h3 {
+        font-size: 1.5rem;
+        color: whitesmoke;
+        margin-bottom: 10px;
+    }
+
+    .support-card p {
+        color: black;
+        margin-bottom: 20px;
+    }
+
+.btnSupport {
+    background-color: #645452;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .btnSupport:hover {
+        background-color: #DFCFB7;
+        letter-spacing: 1.2px;
+    }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .support-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .support-card {
+        width: 80%;
+    }
+
+    .support-container h1 {
+        font-size: 2rem;
+    }
+
+    .support-container p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-container {
+        padding: 0 10px;
+    }
+
+    .support-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .support-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .support-container p {
+        font-size: 0.9rem;
+    }
+
+    .support-card h3 {
+        font-size: 1.2rem;
+    }
+}
