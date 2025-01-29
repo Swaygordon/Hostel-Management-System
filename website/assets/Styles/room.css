@@ -1,0 +1,209 @@
+body {
+    background-color: #DFCFB7;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/*Display Grid*/
+:root {
+    --text-dark: #333;
+    --text-light: #666;
+}
+
+.grid-background {
+    min-height: 60vh;
+    max-height: 160vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFEF;
+    border-radius: 2rem;
+    font-family: Poppins, sans-serif;
+}
+
+
+.Display-container h2 {
+    font-size: 1.8rem; /* 2rem = 32px */
+    margin-top: 1rem;
+    margin-bottom: 1.25rem; /* 20px */
+    background-color: #645452;
+    color: #DFCFB7;
+    border-radius: 0.613rem;
+    padding: 0.626rem 1.253rem;
+    text-decoration: none;
+    text-align: center; /* Center the content */
+    display: inline-block; /* To center with text-align */
+}
+
+
+.Display-container {
+    
+    padding: 0 1.25rem 1.25rem; /* 20px */
+    max-width: 70rem; /* 1120px */
+    width: 100%;
+}
+
+.popular_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Flexible grid */
+    gap: 1.25rem; /* 20px */
+    margin: 0.5rem 0;
+    max-height:155rem;
+}
+
+.popular_card {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(0, 0, 0, 0.1); /* 5px 5px 20px */
+    background-color: #FFF;
+    transition: transform 0.3s ease; /* Smooth scaling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}
+    .popular_card:hover {
+        transform: scale(1.05); /* Slight scaling effect */
+    }
+
+    .popular_card img {
+        width: 100%; /* Ensures the image fits within the card */
+        height: auto;
+    }
+
+.popular_content {
+    padding: 1rem;
+}
+
+.popular_card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.3125rem; /* 5px */
+}
+
+    .popular_card_header h4 {
+        font-size: 1.3rem; /* 1.5rem */
+        font-weight: 600;
+        color: var(--text-dark, #333);
+    }
+
+.popular_content p {
+    color: var(--text-dark, #333);
+    font-weight: 400;
+    font-size: 1.2rem; /* 1.2rem */
+}
+
+
+.popular_container {
+    max-width: 75rem; /* 1200px */
+    margin-bottom: 4rem;
+    padding: 0 1.25rem; /* 20px */
+}
+
+/*End*/
+
+@media (max-width: 1024px) {
+    .Display-container h2 {
+        font-size: 1.75rem;
+    }
+
+    .popular_grid {
+        padding: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem; /* Reduced gap */
+    }
+
+    .popular_content p {
+        font-size: 1rem; /* Slightly smaller font */
+    }
+}
+@media(width<900px){
+
+    section {
+        padding-top: 2.5rem; /* 40px */
+        margin-top: 1.25rem; /* 20px */
+    }
+
+    .popular_grip{
+        grid-template-columns: repeat(1, 1fr);
+        gap:1rem;
+    }
+
+    .popular_content p {
+        font-size: 1rem;
+    }
+
+    .popular_card_header h4{
+        font-size:1.2rem;
+    }
+
+    .popular_card {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .Display-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-container{
+        margin:5rem 0 10rem 0;
+    }
+
+    .popular_grid {
+        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+
+    }
+
+    .popular_card_header h4, .popular_content p {
+        font-size: 0.875rem; /* Adjusted for smaller screens */
+    }
+
+    .popular_container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Display-container h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .popular_content p {
+        font-size: 0.875rem;
+    }
+}
+
+@media(width<600px){
+    section {
+        padding-top: 2rem; /* 40px */
+        margin-top: 1rem; /* 20px */
+    }
+    .header_container{
+        padding-bottom:25rem;
+    }
+
+    .popular_grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .popular_content p {
+        font-size: 1.5rem;
+    }
+
+    .popular_card_header h4 {
+        font-size: 1.2rem;
+    }
+
+    .popular_card {
+        padding: 0px 0px 0px 0px;
+    }
+}

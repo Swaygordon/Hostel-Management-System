@@ -1,0 +1,204 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(254, 254, 254, 1);
+    font-size: 1.1rem;
+}
+
+
+/* Navigation link styling */
+.navbar li a {
+    position: relative;
+    font-size: 1.2rem;
+    color: rgba(254, 254, 254, 1);
+    text-decoration: none;
+    margin: 0 1.875rem 0 0.3125rem; /* margin-left 30px, margin-right 5px */
+    font-family: Poppins;
+}
+
+    /* Hover underline effect */
+    .navbar li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0.075rem; /* 6px */
+        width: 100%;
+        height: 0.1875rem; /* 3px */
+        background: orange;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+    }
+
+    .navbar a:hover::after {
+        transform: scaleX(1);
+    }
+
+  li a:hover {
+        color: orange;
+        
+    }
+
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2rem;
+    background: #02685e;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 4.7rem; /* 60px */
+    max-width: 150rem; /* 1200px */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .logo a {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgba(254, 254, 254, 1);
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: rgba(254, 254, 254, 1);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: orange;
+    color: rgba(254, 254, 254, 1);
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 1.25rem; /* 20px */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+    .action_btn:hover {
+        scale: 1.05;
+        color: rgba(254, 254, 254, 1);
+    }
+
+    .action_btn:active {
+        scale: 0.95;
+    }
+
+/* Dropdown Menu Styling */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 5.05rem; /* 60px */
+    height: 0;
+    width: 18.75rem; /* 300px */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(35px);
+    border-radius: 0.625rem; /* 10px */
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999; /* Ensure it covers everything */
+}
+
+    /* Dropdown Menu when open */
+    .dropdown_menu.open {
+        height: 21rem; /* 240px */
+    }
+
+    /* Dropdown Menu List Item */
+    .dropdown_menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        /* Link Styling with Hover Effect */
+        .dropdown_menu li a {
+            position: relative;
+            color: rgba(254, 254, 254, 1);
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-family: Poppins;
+            transition: color 0.3s ease;
+        }
+
+            /* Hover underline effect for dropdown links */
+            .dropdown_menu li a::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0.175rem; /* 6px */
+                width: 100%;
+                height: 0.1875rem; /* 3px */
+                background: orange;
+                border-radius: 5px;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.5s ease;
+            }
+
+            /* Show underline on hover */
+            .dropdown_menu li a:hover::after {
+                transform: scaleX(1);
+            }
+
+            /* Optional: Change link color on hover */
+            .dropdown_menu li a:hover {
+                color: orange;
+            }
+
+    .dropdown_menu .action_btn {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+    }
+
+/* Responsive Design */
+@media (max-width: 62rem) { /* 992px */
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 62rem) { /* 992px */
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+

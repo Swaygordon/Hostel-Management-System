@@ -1,0 +1,255 @@
+:root {
+    --linear-grad: linear-gradient(to right, #009688, #243B55);
+    --grad-clr1: #141E30;
+    --grad-clr2:#009688;
+}
+
+.mobile_login_form{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: rgb(224, 224, 224);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.mobile_main{
+    width: 370px;
+    height: 500px;
+    background: red;
+    overflow: hidden;  
+    background: linear-gradient(to right, #009688, #243B55);
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    
+}
+
+#chk{
+    display:none;
+}
+
+.mobile_signup{
+    position:relative;
+    width:100%;
+    height:100%;
+    background: linear-gradient(to right, #009688, #243B55);
+}
+
+.mobile_main label{
+    color:#fff;
+    font-size: 2.6rem;
+    justify-content: center;
+    display: flex;
+    margin:60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.mobile_main input{
+    width: 60%;
+    height: 40px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.mobile_main button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #141E30;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.option {
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+    justify-content: center;
+    color: #009688;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+span{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.refer{
+    color: #009688;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+
+form a:hover{
+color:#243B55;
+cursor: pointer;
+text-decoration: underline;
+}
+
+.mobile_main button:hover{
+    background: rgb(8, 91, 245);
+}
+
+.social-container a {
+    border: 1px solid #141E30;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    color:#17253f;;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 30px;
+    height: 30px;
+    width: 30px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.social-container a :hover{
+    color:#009688;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 1.4rem;
+}
+
+
+.mobile_login{
+    height:460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+
+.mobile_login label{
+    color:#009688;
+    transform: scale(.6);
+}
+
+#chk:checked ~.mobile_login{ transform: translateY(-500px); }
+
+#chk:checked ~ .mobile_login label{ transform: scale(1); }
+
+#chk:checked ~ .mobile_signup label{ transform: scale(.6); }
+/* Small Screens: 320px - 480px */
+@media (min-width: 320px) and (max-width: 480px) {
+    .mobile_main {
+        width: 22rem; /* 352px */
+        height: 30rem; /* 480px */
+    }
+    .mobile_main label {
+        font-size: 1.5rem;
+        margin: 4rem; /* 64px */
+    }
+    .mobile_main input {
+        width: 14rem;
+        padding: 0.75rem;
+    }
+    .mobile_main button {
+        width: 14rem;
+        height: 2.75rem;
+        font-size: 1.1rem;
+    }
+    .social-container a {
+        font-size: 1.1rem;
+        height: 2rem;
+        width: 2rem;
+    }
+    .mobile_login{
+        height:590px ;
+    }
+    /* Adjust transform to push .mobile_login higher */
+    #chk:checked ~ .mobile_login {
+        transform: translateY(-520px); /* Increase this value to push it up further */
+    }
+}
+
+/* Medium Screens: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .mobile_main {
+        width: 25rem; /* 400px */
+        height: 32rem; /* 512px */
+    }
+    .mobile_main label {
+        font-size: 1.75rem;
+        margin: 4.5rem; /* 72px */
+    }
+    .mobile_main input {
+        width: 16rem;
+        padding: 0.875rem;
+    }
+    .mobile_main button {
+        width: 16rem;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+    .social-container a {
+        font-size: 1.2rem;
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+    /* Adjust transform to push .mobile_login higher */
+    #chk:checked ~ .mobile_login {
+        transform: translateY(-560px); /* Increase this value to push it up further */
+    }
+}
+
+/* Large Screens: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mobile_main {
+        width: 32rem; /* 448px */
+        height: 38rem; /* 560px */
+    }
+    .mobile_main label {
+        font-size: 2rem;
+        margin: 5rem; /* 80px */
+    }
+    .mobile_main input {
+        width: 18rem;
+        padding: 1rem;
+    }
+    .mobile_main button {
+        width: 18rem;
+        height: 3.25rem;
+        font-size: 1.3rem;
+    }
+    .social-container a {
+        font-size: 1.3rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .mobile_login {
+        height: 40rem;
+    }
+
+    /* Adjust transform to push .mobile_login higher */
+    #chk:checked ~ .mobile_login {
+        transform: translateY(-620px); /* Increase this value to push it up further */
+    }
+}

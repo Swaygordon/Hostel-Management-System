@@ -1,20 +1,16 @@
-﻿/* Sticky footer: pushes footer to the bottom if content is short */
+/* Sticky footer: pushes footer to the bottom if content is short */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-section {
-    padding-top: 2.5rem; /* 40px */
-    margin-top: 1.25rem; /* 20px */
-}
 
 /* About Section Styles */
 .about-section {
-    background-color: #f4f4f4;
+    background-color: rgb(224, 224, 224);
     padding: 80px 50px;
-    margin-top: 120px;
+    margin-top: 15px;
     font-family: Poppins, sans-serif;
 }
 
@@ -26,7 +22,7 @@ section {
 
     .about-section h1 {
         font-size: 3rem;
-        color: #333;
+        color: rgba(53, 58, 71, 1);
         font-weight: 700;
         margin-bottom: 20px;
         text-align: center;
@@ -34,7 +30,7 @@ section {
 
     .about-section p {
         font-size: 1.2rem;
-        color: #555;
+        color: rgb(14, 14, 14);
         line-height: 1.8;
         margin-bottom: 20px;
         text-align: justify;
@@ -48,7 +44,7 @@ section {
 
         .about-section ul li {
             font-size: 1.1rem;
-            color: #555;
+            color: rgb(14, 14, 14);
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
@@ -58,7 +54,7 @@ section {
                 content: "\f00c";
                 font-family: 'Font Awesome 5 Free';
                 font-weight: 900;
-                color: #4caf50;
+                color: #009688;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -67,15 +63,15 @@ section {
 
     .about-section h2 {
         font-size: 2rem;
-        color: #444;
+        color: rgba(53, 58, 71, 1);
         margin-bottom: 15px;
         text-transform: uppercase;
-        border-left: 4px solid #4caf50;
+        border-left: 4px solid #009688;
         padding-left: 10px;
     }
 
     .about-section .container ul li strong {
-        color: #4caf50;
+        color: #009688;
     }
 
 /* Mobile responsiveness */

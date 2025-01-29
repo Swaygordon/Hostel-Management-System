@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Styles/mobile-login.css">
+    <link rel="stylesheet" href="Styles/navbar2.css">
+</head>
+<body>
+    <section>
+        <header>
+            <div class="navbar-body">
+                <div class="navbar">
+                    <div class="logo"><a href="home2.html">University Hall Two</a></div>
+                    <ul class="links">
+                        <li><a href="home2.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+
+                <div class="dropdown_menu">
+                    <ul class="links">
+                        <li><a href="home2.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section class="mobile_login_form">
+        <div class="mobile_body">
+            <div class="mobile_main">
+                <input type="checkbox" id="chk" aria-hidden="true">
+                <div class="mobile_signup">    
+                    <form>
+                        <label for="chk" aria-hidden="true">Sign up</label>
+                        <input type="text" name="txt" placeholder="User name" required>
+                        <input type="email" name="email" placeholder="Email" required> 
+                        <input type="Password" name="pswd" placeholder="Password" required>
+                        <button>Sign up</button>
+                        <span>Already have an account? <a class="refer" id="login-link">Login</a></span>
+                    </form>
+                </div>
+                <div class="mobile_login">
+                    <form>
+                        <label for="chk" aria-hidden="true">Login</label>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <input type="email" name="email" placeholder="Email" required> 
+                        <input type="Password" name="pswd" placeholder="Password" required>
+                        <button>Login</button>
+                        <a class="option">Recover password?</a>
+                        <span>Don't have an account? <a class="refer" id="signup-link">Sign-up</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById("login-link").addEventListener("click", function() {
+            document.getElementById("chk").checked = true;
+        });
+
+        document.getElementById("signup-link").addEventListener("click", function() {
+            document.getElementById("chk").checked = false;
+        });
+    </script>
+<script src="JS/navbar.js"></script>
+
+
+</body>
+</html>
